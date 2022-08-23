@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #222222;
+    font-family: 'Roboto', sans-serif;  
+}
+.navbar{
+    background-color: #5161ce;
+    border-bottom-left-radius: 20px;
+    padding: 10px 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+#logo{
+    width: 150px;
+    border: 2px solid #fff;
+}
+.navbar ul{
+    list-style: none;
+    display: flex;
+    width: 700px;
+    justify-content: space-between;
+    margin-top: -40px;
+    margin-left: 150px;
+}
+.navbar ul .nav-item{
+    
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.5s;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar ul .nav-item .nav-link{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+}
+.bx{
+    margin-right: 8px;
+    font-size: 19px;
+}
+.nav-link{
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+}
+
+.nav-link svg,
+.nav-link svg rect{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+}
+.nav-link svg rect{
+    stroke: #fff;
+    stroke-width: 4;
+    transition: 2s;
+    stroke-dasharray: 0 200;
+    stroke-dashoffset: 0;
+
+}
+.nav-link:hover svg rect{
+    stroke: #fff;
+    stroke-dasharray: 400 0;
+    stroke-dashoffset: 0;
+}
+.slide-down{
+    animation: slidedown 1.5s linear forwards;
+}
+@keyframes slidedown {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.slide-left{
+    animation: slideleft 1.6s linear forwards;
+}
+@keyframes slideleft {
+    0%{
+        transform: translate(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+
+.main-wrapper{
+    width: 900px;
+    height: 500px;
+    position: relative;
+    border-radius: 10px;
+    margin-top: 50px;
+    display: flex;
+    margin-top: 15px;
+    margin-left: 200px;
+}
+.first{
+    width: 100%; 
+    height: 100%;
+    background-image: linear-gradient(to right, #5161ce, #354ff5);
+    border-radius: 10px 0px 0px 10px;
+    color: white;
+    text-align: center;
+}
+.content-first{
+    margin-top: 140px;
+    padding: 20px;
+}
+.content-first p{
+    margin-top: 30px;
+}
+.content-first button{
+    margin-top: 20px;
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 5px;
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #FFF;
+    font-weight: 400;
+}
+.content-first span{
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: 0;
+    background-color: #2b2b2b;
+    border-radius: 20px;
+    z-index: -1;
+    transition: 0.5s;
+}
+.content-first button:hover span{
+    width: 100%;
+}
+.second{
+    width: 100%; 
+    height: 100%;
+    background-color: #fff;
+    border-radius: 0px 10px 10px 0px;
+    text-align: center;
+}
+.second-content{
+    margin-top: 125px;
+    padding: 20px;
+    display: grid;
+    color: #5161ce;
+}
+
+#name{
+    font-size: 15px;
+    padding: 10px;
+    margin-top: 35px;
+}
+#username{
+    font-size: 15px;
+    padding: 10px;
+    margin-top: 20px;
+}
+#btn{
+    margin-top: 25px;
+    margin-left: 130px;
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 5px;
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+    color: #FFF;
+    border: 2px solid #FFF;
+    font-weight: 400;
+    background-color: #2b2b2b;
+}
+.second-content span{
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: 0;
+    background-color: #5161ce;
+    border-radius: 20px;
+    z-index: -1;
+    transition: 0.5s;
+   
+}
+.second-content #btn:hover span{
+    width: 100%;
+}
+.input-group{
+    position: relative;
+    display: grid;
+}
+.input{
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font: inherit;
+    background-color: transparent;
+    outline: 2px solid black;
+}
+.input-label{
+    margin-top: 35px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(10px, 10px);
+    transition: transform .25s;
+}
+.input:focus+.input-label,
+.input:valid+.input-label{
+    transform: translate(10px, -10px) scale(0.9);
+    color: #354ff5;
+    padding-inline: 5px;
+    background-color: #fff;
+}
+.input:is(:focus, :valid){
+    outline-color: #d1c5fc;
+}
+
+.input-label2{
+    margin-top: -39px;
+    width: 20%;
+    height: 20px;
+    transform: translate(10px, 10px);
+    transition: transform .25s;
+}
+.input:focus+.input-label2,
+.input:valid+.input-label2{
+    transform: translate(10px, -10px) scale(0.9);
+    color: #354ff5;
+    padding-inline: 5px;
+    background-color: #fff;
+}
+
+
+@media only screen and (max-width:700px){
+    .navbar{
+        width: 265px;
+    }
+    #logo{
+        height: 20px;
+        width: 60px;
+        margin-left: -30px;
+    }
+    .navbar ul{
+        display: none;
+    }
+    .main-wrapper{
+        margin-left: 17px;
+        display: grid;
+        width: 232px;
+    }
+    .first{
+        width: 232px;
+        height: 250px;
+        border-radius: 10px 10px 0px 0px;
+    }
+    .content-first{
+        width: 232px;
+        margin-top: 30px;
+    }
+    .content-first h1{
+        font-size: 18px;
+    }
+    .content-first p{
+        font-size: 13px;
+    }
+    .content-first button{
+        width: 140px;
+    }
+    .second{
+        width: 232px;
+        height: 280px;
+        border-radius: 0px 0px 10px 10px;
+    }
+    .second-content{
+       margin-left: -10px;
+       margin-top: -0px;
+    }
+    .second-content h1{
+        font-size: 18px;
+        margin-left: -15px;
+    }
+    .input-group{
+        width: 232px;
+        height: 150px;
+        padding: 5px;
+    }
+    #name{
+        width: 200px;
+        height: 30px;
+        margin-top: 31px;
+    }
+    #username{
+        width: 200px;
+        height: 30px;
+    }
+    .input-label{
+        font-size: 10px;
+    }
+    .input-label2{
+        font-size: 10px;
+        height: 10px;
+    }
+    #btn{
+        margin-left: 38px;
+        width: 140px;
+        margin-top: -5px;
+    }
+}
+
+
+
